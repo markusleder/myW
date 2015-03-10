@@ -13,5 +13,4 @@ myW actually means "my weight" and come out of the idea to lose some kilogramms 
 * Chocolately install
 and more
 
-![myW](../../myW/Content/Resource/Pictures/myW.jpg)
-Format: ![Alt Text](url)
+![myW](https://github.com/markusleder/myW/blob/local/myW/Content/Resources/Pictures/myW.JPG)
