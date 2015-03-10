@@ -1,0 +1,23 @@
+﻿<div class="jumbotron">
+    <h1>myW</h1>
+    <p class="lead">lem's weight.</p>
+</div>
+<div class="row" div id="example" ng-app="myW">
+    <div class="col-md-12" ng-controller="WeightCtrl">
+        <h2>Weight</h2>
+        <p>Over time.</p>
+        <div kendo-chart
+             k-legend="{ position: 'bottom' }"
+             k-series="[
+                { field: 'morning', name: 'Morning measurements', categoryField: 'date', color: '#ff0000' },
+                { field: 'midday', name: 'Any measurements during the day' , categoryfield: 'date', color: '#00ff00' },
+                { field: 'evening', name: 'Evening measurements' , categoryfield: 'date', color: '#0000ff' }
+             ]"
+             k-series-defaults="{ type: 'line', missingvalues: 'gap', bar: { value: '70.0' } }"
+             k-data-source="weight" style="height: 500px;"
+             k-data-category-axis="{ baseUnit: 'days' }"
+             k-tooltip="{ visible: true, format: '{0} kg', template: '#= category #  #= value #' }">
+        </div>
+    </div>
+</div>
+</div>
