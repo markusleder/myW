@@ -12,3 +12,6 @@ myW actually means "my weight" and come out of the idea to lose some kilogramms 
 * Octopus Deploy
 * Chocolately install
 and more
+
+![myW](../../myW/Content/Resource/Pictures/myW.jpg)
+Format: ![Alt Text](url)
