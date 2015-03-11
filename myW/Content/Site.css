@@ -32,3 +32,10 @@ textarea {
 .jumbotron {
     background-color: #eeeeee;
 }
+
+footer {
+    padding-top: 20px;
+    background-color: #000080;
+    color: white;
+    border-color: #000080;
+}

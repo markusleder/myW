@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using MyW.Models;
 
 namespace MyW.Controllers
 {
+    [RoutePrefix("api/Individuals")]
     public class IndividualsController : ApiController
     {
         private MeasurementContext db = new MeasurementContext();
 
-        // GET: api/Individuals
         public IQueryable<Individual> GetIndividuals()
         {
             return db.Individuals;
@@ -24,6 +20,7 @@ namespace MyW.Controllers
 
         // GET: api/Individuals/5
         [ResponseType(typeof(Individual))]
+        [Route("{id}")]
         public IHttpActionResult GetIndividual(long id)
         {
             Individual individual = db.Individuals.Find(id);
@@ -37,6 +34,7 @@ namespace MyW.Controllers
 
         // PUT: api/Individuals/5
         [ResponseType(typeof(void))]
+        [Route("{id}")]
         public IHttpActionResult PutIndividual(long id, Individual individual)
         {
             if (!ModelState.IsValid)
@@ -87,6 +85,7 @@ namespace MyW.Controllers
 
         // DELETE: api/Individuals/5
         [ResponseType(typeof(Individual))]
+        [Route("{id}")]
         public IHttpActionResult DeleteIndividual(long id)
         {
             Individual individual = db.Individuals.Find(id);

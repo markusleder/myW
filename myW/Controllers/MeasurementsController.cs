@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using MyW.Models;
 
 namespace MyW.Controllers
 {
+    [RoutePrefix("api/Measurements")]
     public class MeasurementsController : ApiController
     {
         private MeasurementContext db = new MeasurementContext();
 
         // GET: api/Measurements
+        [Route("")]
         public IQueryable<Measurement> GetMeasurements()
         {
             return db.Measurements;
@@ -24,6 +22,7 @@ namespace MyW.Controllers
 
         // GET: api/Measurements/5
         [ResponseType(typeof(Measurement))]
+        [Route("{id}")]
         public IHttpActionResult GetMeasurement(long id)
         {
             Measurement measurement = db.Measurements.Find(id);
@@ -37,6 +36,7 @@ namespace MyW.Controllers
 
         // PUT: api/Measurements/5
         [ResponseType(typeof(void))]
+        [Route("{id}")]
         public IHttpActionResult PutMeasurement(long id, Measurement measurement)
         {
             if (!ModelState.IsValid)
@@ -87,6 +87,7 @@ namespace MyW.Controllers
 
         // DELETE: api/Measurements/5
         [ResponseType(typeof(Measurement))]
+        [Route("{id}")]
         public IHttpActionResult DeleteMeasurement(long id)
         {
             Measurement measurement = db.Measurements.Find(id);

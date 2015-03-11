@@ -262,6 +262,7 @@
     <Content Include="Content\Data\weight.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\lem-myw.pubxml" />
     <None Include="Properties\PublishProfiles\myWeight.pubxml" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
