@@ -12,3 +12,5 @@ myW actually means "my weight" and come out of the idea to lose some kilogramms 
 * Octopus Deploy
 * Chocolately install
 and more
+
+![myW](https://github.com/markusleder/myW/blob/local/myW/Content/Resources/Pictures/myW.JPG)
