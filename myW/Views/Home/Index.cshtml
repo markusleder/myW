@@ -10,12 +10,12 @@
              k-legend="{ position: 'bottom' }"
              k-series="[
                 { field: 'morning', name: 'Morning measurements', categoryField: 'date', color: '#ff0000' },
-                { field: 'midday', name: 'Any measurements during the day' , categoryfield: 'date', color: '#00ff00' },
-                { field: 'evening', name: 'Evening measurements' , categoryfield: 'date', color: '#0000ff' }
+                { field: 'midday', name: 'Any measurements during the day' , categoryField: 'date', color: '#00ff00' },
+                { field: 'evening', name: 'Evening measurements' , categoryField: 'date', color: '#0000ff' }
              ]"
-             k-series-defaults="{ type: 'line', missingvalues: 'gap', bar: { value: '70.0' } }"
+             k-series-defaults="{ type: 'line', missingValues: 'gap' }"
              k-data-source="weight" style="height: 500px;"
-             k-data-category-axis="{ baseUnit: 'days' }"
+             k-category-axis="{ field: 'date', baseUnit: 'days', labels: { background: 'green', color: 'white', dateFormats: { days: 'dd.MM' }, rotation: -45 } }"
              k-tooltip="{ visible: true, format: '{0} kg', template: '#= category #  #= value #' }">
         </div>
     </div>
