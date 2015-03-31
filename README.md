@@ -11,6 +11,7 @@ myW actually means "my weight" and come out of the idea to lose some kilogramms 
 * TeamCity build
 * Octopus Deploy
 * Chocolately install
+* TeamCity
 and more
 
 ![myW](https://github.com/markusleder/myW/blob/local/myW/Content/Resources/Pictures/myW.JPG)
